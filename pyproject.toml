@@ -13,5 +13,7 @@ dependencies = [
   "nltk>=3.9",
   "textblob>=0.18",
   "requests>=2.32",
-  "beautifulsoup4>=4.12"
+  "beautifulsoup4>=4.12",
+  "striprtf>=0.0.26",
+  "PyPDF2>=3.0"
 ]
