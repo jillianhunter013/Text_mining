@@ -1,22 +1,27 @@
 [project]
-name = "booking-scraping"
+name = "nlp-ta-massive-text"
 version = "0.1.0"
-description = "Add your description here"
+description = "TA Session: Working with Massive Text Data - BSE Data Science Master"
 readme = "README.md"
 requires-python = ">=3.12,<3.13"
 dependencies = [
-    "pandas>=2.0.0,<3.0.0",
-    "numpy>=1.26.4,<2.0.0",
-    "pyarrow>=21.0.0,<22.0.0",
-    "requests>=2.31,<3",
-    "selenium>=4.39.0",
-    "webdriver-manager>=4.0.2",
-    "beautifulsoup4>=4.14.3",
-    "lxml>=6.0.2",
+    "pandas>=2.0.0",
+    "duckdb>=1.0.0",
+    "polars>=1.0.0",
+    "pyarrow>=15.0.0",
+    "datasets>=2.18.0",      # For downloading CC-News from HuggingFace
+    "tqdm>=4.66.0",          # Progress bars
+    "psutil>=5.9.0",         # RAM monitoring for the exercise
+    "jupyter>=1.0.0",
+    "ipykernel>=6.29.0",
+    "matplotlib>=3.8.0",     # For any quick visualizations
 ]
 
-# Development dependencies
-[dependency-groups]
-dev = [
-    "ipykernel"
+[project.optional-dependencies]
+postgres = [
+    "psycopg2-binary>=2.9.9",  # Only needed if students want to try Postgres locally
+    "sqlalchemy>=2.0.0",
 ]
+
+[tool.uv]
+dev-dependencies = []
