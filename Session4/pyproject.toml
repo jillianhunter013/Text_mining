@@ -1,0 +1,28 @@
+[project]
+name = "session4-wef-vectors"
+version = "0.3.0"
+description = "Session 4: scrape WEF Davos transcripts and build vector representations (TF-IDF / CountVectorizer)"
+requires-python = ">=3.11,<3.13"
+dependencies = [
+  "pip>=24.0",
+  # Core data / ML
+  "numpy>=1.26",
+  "pandas>=2.2",
+  "scikit-learn>=1.5",
+  "tqdm>=4.66",
+  "matplotlib>=3.8",
+
+  # NLP stack used in the notebook
+  "nltk>=3.8",
+  "spacy>=3.8",
+
+  # Notebook + kernel
+  "jupyter>=1.0",
+  "ipykernel>=6.29",
+
+  # Browser-based scraping
+  "playwright>=1.41",
+]
+
+[tool.uv]
+prerelease = "if-necessary-or-explicit"
